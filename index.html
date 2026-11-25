@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaheed Hussain &amp; Azra | Wedding Invitation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel, Amiri, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       SUNLIT SILK-IVORY, DUSTY ROSE & ANTIQUE CHAMPAGNE GOLD DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-silk: #FDF8F7;
+      --bg-blush-tint: #F8ECEA;
+      --rose-deep: #6E3341;
+      --rose-muted: #8F4A5A;
+      --rose-soft: #EBD5D2;
+      --gold-antique: #B68D4C;
+      --gold-champagne: #E3C896;
+      --gold-hairline: rgba(182, 141, 76, 0.36);
+      --ink-charcoal: #271E20;
+      --ink-muted: #665458;
+      --rose-gold-foil: linear-gradient(135deg, #9C7138 0%, #E3C896 36%, #B68D4C 68%, #EAD4A8 90%, #9C7138 100%);
+    }
+
+    .font-editorial { font-family: 'Cormorant Garamond', serif; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-amiri { font-family: 'Amiri', serif; }
+    .font-sans-clean { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-silk);
+      color: var(--ink-charcoal);
+      overflow-x: hidden;
+    }
+
+    /* Fine Cotton-Silk Paper Texture */
+    .silk-paper {
+      background-color: var(--bg-silk);
+      background-image:
+        radial-gradient(rgba(182, 141, 76, 0.065) 1px, transparent 0),
+        radial-gradient(rgba(110, 51, 65, 0.04) 1px, transparent 0);
+      background-size: 34px 34px;
+      background-position: 0 0, 17px 17px;
+    }
+
+    .blush-surface { background-color: var(--bg-blush-tint); }
+    .text-charcoal { color: var(--ink-charcoal); }
+    .text-muted-ink { color: var(--ink-muted); }
+    .text-rose-deep { color: var(--rose-deep); }
+    .text-rose-muted { color: var(--rose-muted); }
+    .text-gold-antique { color: var(--gold-antique); }
+    .bg-rose-deep { background-color: var(--rose-deep); }
+    .bg-rose-muted { background-color: var(--rose-muted); }
+    .border-gold-hairline { border-color: var(--gold-hairline); }
+
+    /* Shimmering Champagne-Rose Gold Foil */
+    .gold-foil-text {
+      background: var(--rose-gold-foil);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: foilShimmer 7s linear infinite;
+    }
+
+    @keyframes foilShimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .btn-champagne-gold {
+      background: var(--rose-gold-foil);
+      background-size: 200% auto;
+      color: #271E20;
+      font-weight: 600;
+      box-shadow: 0 10px 26px rgba(182, 141, 76, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-position 0.45s ease;
+    }
+
+    .btn-champagne-gold:hover {
+      transform: translateY(-2px);
+      background-position: right center;
+      box-shadow: 0 14px 32px rgba(182, 141, 76, 0.36);
+    }
+
+    .btn-dusty-rose {
+      background-color: var(--rose-deep);
+      color: #FDF8F7;
+      box-shadow: 0 10px 24px rgba(110, 51, 65, 0.22);
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .btn-dusty-rose:hover {
+      background-color: var(--rose-muted);
+      transform: translateY(-2px);
+    }
+
+    /* Full-Screen 'Tap to Open' Veil Reveal */
+    #entry-cover {
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.9s ease;
+    }
+
+    .veil-left, .veil-right {
+      transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    #entry-cover.opened .veil-left {
+      transform: translateX(-102%);
+    }
+
+    #entry-cover.opened .veil-right {
+      transform: translateX(102%);
+    }
+
+    #entry-cover.opened .cover-centerpiece {
+      opacity: 0;
+      transform: scale(1.12);
+      pointer-events: none;
+    }
+
+    @keyframes sealPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(182, 141, 76, 0.42), 0 18px 40px rgba(110, 51, 65, 0.16); }
+      50% { box-shadow: 0 0 0 16px rgba(182, 141, 76, 0), 0 18px 40px rgba(110, 51, 65, 0.16); }
+    }
+
+    .monogram-seal-btn {
+      animation: sealPulse 2.8s infinite;
+      background: radial-gradient(circle at 30% 28%, #FFFDFC 0%, #E3C896 48%, #B68D4C 95%);
+    }
+
+    /* Scroll Indicator Bounce */
+    @keyframes scrollPromptFloat {
+      0%, 100% { transform: translateY(0); opacity: 0.7; }
+      50% { transform: translateY(6px); opacity: 1; }
+    }
+
+    .scroll-cue {
+      animation: scrollPromptFloat 2.2s ease-in-out infinite;
+    }
+
+    /* Reveal Animation on Scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scratch Canvas Touch Safeguard */
+    #scratch-canvas {
+      touch-action: none;
+      cursor: grab;
+    }
+
+    #scratch-canvas:active {
+      cursor: grabbing;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FDF8F7; }
+    ::-webkit-scrollbar-thumb { background: #B68D4C; border-radius: 9999px; }
+  </style>
+</head>
+<body class="silk-paper antialiased selection:bg-rose-100 selection:text-stone-900">
+
+  <!-- Replaced Wedding Audio Track (Upload your chosen clip as 'wedding-theme.mp3' in your repo) -->
+  <audio id="wedding-song" src="wedding-theme.mp3" loop preload="auto"></audio>
+
+  <!-- Toast Notification -->
+  <div id="toast-banner" class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-4">
+    <div class="bg-[#271E20]/95 text-[#FDF8F7] border border-[#B68D4C] px-5 py-2.5 rounded-full shadow-2xl flex items-center gap-2.5 backdrop-blur-md">
+      <i class="fa-solid fa-sparkles text-[#E3C896] text-xs"></i>
+      <span id="toast-message" class="text-xs sm:text-sm font-medium tracking-wide">Action completed</span>
+    </div>
+  </div>
+
+  <!-- Floating Top-Right Music Toggle -->
+  <button id="audio-toggle-btn" type="button" aria-label="Toggle Background Music"
+    class="fixed top-4 right-4 z-40 w-11 h-11 rounded-full bg-white/85 backdrop-blur-md border border-[#B68D4C]/55 shadow-lg flex items-center justify-center text-rose-deep hover:scale-105 transition cursor-pointer">
+    <i id="audio-toggle-icon" class="fa-solid fa-volume-xmark text-sm"></i>
+  </button>
+
+  <!-- ==========================================================================
+       1. FULL-SCREEN 'TAP TO OPEN' COVER WITH S & A MONOGRAM SEAL
+       ========================================================================== -->
+  <div id="entry-cover" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden">
+    <!-- Left & Right Silk-Blush Curtains -->
+    <div class="veil-left absolute inset-y-0 left-0 w-1/2 silk-paper border-r border-[#B68D4C]/35 shadow-[12px_0_36px_rgba(110,51,65,0.08)]"></div>
+    <div class="veil-right absolute inset-y-0 right-0 w-1/2 silk-paper border-l border-[#B68D4C]/35 shadow-[-12px_0_36px_rgba(110,51,65,0.08)]"></div>
+
+    <!-- Subtle Botanical Corner Flourishes -->
+    <svg class="veil-left absolute top-5 left-5 w-28 h-28 sm:w-40 sm:h-40 text-[#6E3341]/20 pointer-events-none" viewBox="0 0 140 140" fill="none">
+      <path d="M12 128 C22 65, 65 22, 128 12" stroke="currentColor" stroke-width="1.2"/>
+      <ellipse cx="42" cy="84" rx="14" ry="6" transform="rotate(-38 42 84)" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="68" cy="56" rx="15" ry="6" transform="rotate(-42 68 56)" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="96" cy="34" rx="13" ry="5.5" transform="rotate(-45 96 34)" stroke="currentColor" stroke-width="1"/>
+    </svg>
+    <svg class="veil-right absolute bottom-5 right-5 w-28 h-28 sm:w-40 sm:h-40 text-[#6E3341]/20 pointer-events-none transform rotate-180" viewBox="0 0 140 140" fill="none">
+      <path d="M12 128 C22 65, 65 22, 128 12" stroke="currentColor" stroke-width="1.2"/>
+      <ellipse cx="42" cy="84" rx="14" ry="6" transform="rotate(-38 42 84)" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="68" cy="56" rx="15" ry="6" transform="rotate(-42 68 56)" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="96" cy="34" rx="13" ry="5.5" transform="rotate(-45 96 34)" stroke="currentColor" stroke-width="1"/>
+    </svg>
+
+    <!-- Center Monogram Seal Trigger -->
+    <div class="cover-centerpiece relative z-10 flex flex-col items-center text-center px-6 transition-all duration-700">
+      <p class="font-amiri text-2xl sm:text-4xl text-rose-deep mb-2">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </p>
+      <p class="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.34em] text-gold-antique font-semibold mb-7">
+        Nikah Invitation
+      </p>
+
+      <button id="tap-to-open-btn" type="button" aria-label="Tap to Open Invitation"
+        class="monogram-seal-btn relative w-36 h-36 sm:w-44 sm:h-44 rounded-full flex flex-col items-center justify-center border-2 border-[#9C7138]/55 cursor-pointer focus:outline-none transition-transform duration-300 hover:scale-105">
+        <svg class="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] text-[#271E20]/25 pointer-events-none" viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="60" r="52" stroke="currentColor" stroke-width="0.9" stroke-dasharray="3 3"/>
+        </svg>
+        <span class="font-cinzel text-3xl sm:text-4xl font-bold tracking-widest text-[#271E20]">
+          S &amp; A
+        </span>
+        <span class="h-px w-12 bg-[#271E20]/30 my-1.5"></span>
+        <span class="font-cinzel text-[9px] sm:text-[10px] uppercase tracking-[0.24em] text-[#271E20] font-semibold">
+          Tap to Open
+        </span>
+      </button>
+
+      <p class="font-editorial italic text-2xl sm:text-3xl text-charcoal mt-7">
+        Shaheed Hussain &amp; Azra
+      </p>
+      <p class="font-cinzel text-[10px] uppercase tracking-[0.28em] text-muted-ink mt-1.5">
+        20 . 12 . 2026 • Trichy
+      </p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. HERO SECTION WITH BISMILLAH, INVITATION LINE, NAMES + DEGREES & SCROLL
+       ========================================================================== -->
+  <header class="relative min-h-screen flex flex-col justify-between items-center text-center px-5 pt-14 pb-8 sm:pt-20 sm:pb-10 overflow-hidden">
+    <div class="max-w-3xl w-full mx-auto bg-white/80 backdrop-blur-sm border border-[#B68D4C]/40 rounded-t-[220px] rounded-b-3xl px-6 py-12 sm:px-14 sm:py-16 shadow-[0_24px_70px_rgba(110,51,65,0.07)] relative">
+      <div class="absolute inset-2.5 border border-[#B68D4C]/22 rounded-t-[212px] rounded-b-2xl pointer-events-none"></div>
+
+      <div class="w-12 h-12 rounded-full border border-[#B68D4C] bg-[#FDF8F7] flex items-center justify-center mx-auto mb-6 font-cinzel text-xs font-bold text-rose-deep tracking-wider shadow-sm">
+        S&amp;A
+      </div>
+
+      <p class="font-amiri text-3xl sm:text-5xl text-rose-deep mb-2 leading-relaxed">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </p>
+      <p class="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.28em] text-gold-antique font-semibold mb-7">
+        In the name of Allah, the Most Gracious, the Most Merciful
+      </p>
+
+      <div class="flex items-center justify-center gap-3 mb-7">
+        <span class="h-px w-12 sm:w-16 bg-[#B68D4C]/45"></span>
+        <span class="w-1.5 h-1.5 rotate-45 bg-[#B68D4C]"></span>
+        <span class="h-px w-12 sm:w-16 bg-[#B68D4C]/45"></span>
+      </div>
+
+      <p class="font-editorial italic text-xl sm:text-2xl text-muted-ink max-w-lg mx-auto mb-8 leading-relaxed">
+        Together with their families, request the pleasure of your esteemed presence at the Nikkah Ceremony of
+      </p>
+
+      <div class="my-3">
+        <h1 class="font-editorial font-bold text-3xl sm:text-5xl lg:text-6xl text-charcoal tracking-tight leading-tight">
+          SHAHEED HUSSAIN,<span class="block sm:inline font-cinzel text-lg sm:text-2xl lg:text-3xl font-semibold text-rose-deep tracking-wider mt-1 sm:mt-0 sm:ml-2">B.RIT., DRDT.,</span>
+        </h1>
+      </div>
+
+      <div class="my-3 flex items-center justify-center gap-4">
+        <span class="h-px w-10 bg-[#B68D4C]/45"></span>
+        <span class="font-editorial italic font-semibold text-3xl sm:text-5xl gold-foil-text">&amp;</span>
+        <span class="h-px w-10 bg-[#B68D4C]/45"></span>
+      </div>
+
+      <div class="my-3">
+        <h2 class="font-editorial font-bold text-3xl sm:text-5xl lg:text-6xl text-charcoal tracking-tight leading-tight">
+          AZRA,<span class="font-cinzel text-lg sm:text-2xl lg:text-3xl font-semibold text-rose-deep tracking-wider ml-2">M.A</span>
+        </h2>
+      </div>
+
+      <div class="mt-9 inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#F8ECEA] border border-[#B68D4C]/35">
+        <span class="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.22em] text-rose-deep font-semibold">
+          Sunday · 20 December 2026
+        </span>
+        <span class="text-gold-antique">·</span>
+        <span class="font-cinzel text-[11px] sm:text-xs uppercase tracking-[0.2em] text-charcoal">
+          Trichy
+        </span>
+      </div>
+    </div>
+
+    <a href="#poetic-quote" class="scroll-cue mt-8 inline-flex flex-col items-center gap-1.5 text-rose-deep/80 hover:text-rose-deep transition">
+      <span class="font-cinzel text-[10px] uppercase tracking-[0.34em] font-semibold">SCROLL</span>
+      <i class="fa-solid fa-chevron-down text-xs text-gold-antique"></i>
+    </a>
+  </header>
+
+  <!-- ==========================================================================
+       3. POETIC BLESSING QUOTE
+       ========================================================================== -->
+  <section id="poetic-quote" class="py-14 sm:py-20 px-5 border-y border-gold-hairline blush-surface/75">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <i class="fa-solid fa-feather-pointed text-gold-antique text-lg mb-4"></i>
+      <blockquote class="font-editorial italic text-2xl sm:text-4xl text-charcoal leading-relaxed">
+        “By the grace of Allah, two hearts become one, and a beautiful forever begins”
+      </blockquote>
+      <div class="flex items-center justify-center gap-2.5 mt-6">
+        <span class="h-px w-10 bg-[#B68D4C]/45"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-[#B68D4C]"></span>
+        <span class="h-px w-10 bg-[#B68D4C]/45"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. INTERACTIVE HTML5 CANVAS 'SCRATCH TO REVEAL' SAVE-THE-DATE CARD
+       ========================================================================== -->
+  <section id="scratch-save-the-date" class="py-16 sm:py-24 px-5">
+    <div class="max-w-xl mx-auto text-center fade-up">
+      <p class="font-cinzel text-[11px] uppercase tracking-[0.32em] text-gold-antique font-semibold mb-2">
+        Save The Date
+      </p>
+      <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-charcoal mb-2">
+        Scratch to Reveal
+      </h2>
+      <p class="text-xs sm:text-sm text-muted-ink mb-8">
+        Rub the rose-gold foil card with your finger or cursor to unveil our Nikah date
+      </p>
+
+      <div id="scratch-card-wrapper" class="relative w-full h-56 sm:h-64 rounded-3xl overflow-hidden border-2 border-[#B68D4C]/55 shadow-[0_20px_50px_rgba(110,51,65,0.12)] bg-white select-none">
+        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-white via-[#FDF8F7] to-[#F8ECEA]">
+          <div class="absolute inset-2 border border-[#B68D4C]/30 rounded-2xl pointer-events-none"></div>
+          <span class="font-cinzel text-[10px] uppercase tracking-[0.28em] text-rose-deep font-semibold mb-2">
+            We Are Getting Married
+          </span>
+          <p class="font-editorial font-bold text-2xl sm:text-3xl text-charcoal leading-snug">
+            Sunday · 20 December 2026
+          </p>
+          <p class="font-cinzel text-xs sm:text-sm uppercase tracking-[0.22em] text-gold-antique font-semibold mt-1.5">
+            11:00 AM Onwards
+          </p>
+          <div class="h-px w-16 bg-[#B68D4C]/40 my-2.5"></div>
+          <p class="font-editorial italic text-lg sm:text-xl text-rose-deep font-semibold">
+            L. K. S Mahal · Trichy - 1
+          </p>
+        </div>
+
+        <canvas id="scratch-canvas" class="absolute inset-0 w-full h-full z-10 transition-opacity duration-700"></canvas>
+      </div>
+
+      <div class="mt-5">
+        <button id="reveal-all-btn" type="button"
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#B68D4C]/50 bg-white/85 hover:bg-[#F8ECEA] font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.22em] text-rose-deep font-semibold transition cursor-pointer">
+          <i class="fa-solid fa-wand-magic-sparkles text-gold-antique"></i>
+          <span>Reveal All</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SINGLE-EVENT 'DETAILS OF THE WEDDING DAY' CARD
+       ========================================================================== -->
+  <section id="wedding-details" class="py-16 sm:py-24 px-5 border-y border-gold-hairline blush-surface/75">
+    <div class="max-w-2xl mx-auto fade-up">
+      <div class="text-center mb-10">
+        <p class="font-cinzel text-[11px] uppercase tracking-[0.32em] text-rose-deep font-semibold mb-2">
+          Insha Allah • Single Event
+        </p>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-charcoal">
+          Details of the Wedding Day
+        </h2>
+      </div>
+
+      <div class="bg-white border border-[#B68D4C]/45 rounded-3xl p-7 sm:p-11 shadow-[0_22px_60px_rgba(110,51,65,0.08)] text-center relative overflow-hidden">
+        <div class="absolute inset-2.5 border border-[#B68D4C]/22 rounded-2xl pointer-events-none"></div>
+
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8ECEA] border border-[#B68D4C]/35 font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.24em] text-rose-deep font-semibold mb-4">
+          <i class="fa-solid fa-mosque text-gold-antique"></i>
+          <span>Nikah Ceremony</span>
+        </span>
+
+        <h3 class="font-editorial text-3xl sm:text-4xl font-bold text-charcoal mb-6">
+          Sacred Nikah &amp; Wedding Lunch
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 py-6 border-y border-gold-hairline mb-8 text-center">
+          <div class="px-2">
+            <i class="fa-regular fa-calendar text-gold-antique text-lg mb-2"></i>
+            <p class="font-cinzel text-[10px] uppercase tracking-[0.22em] text-muted-ink mb-1">Date</p>
+            <p class="font-editorial font-bold text-lg sm:text-xl text-charcoal">
+              Sunday, 20 December 2026
+            </p>
+          </div>
+
+          <div class="px-2 sm:border-x border-gold-hairline">
+            <i class="fa-regular fa-clock text-gold-antique text-lg mb-2"></i>
+            <p class="font-cinzel text-[10px] uppercase tracking-[0.22em] text-muted-ink mb-1">Time</p>
+            <p class="font-editorial font-bold text-lg sm:text-xl text-charcoal">
+              11:00 AM Onwards
+            </p>
+            <p class="text-[11px] text-rose-muted font-medium">Followed by Wedding Lunch</p>
+          </div>
+
+          <div class="px-2">
+            <i class="fa-solid fa-location-dot text-gold-antique text-lg mb-2"></i>
+            <p class="font-cinzel text-[10px] uppercase tracking-[0.22em] text-muted-ink mb-1">Venue</p>
+            <p class="font-editorial font-bold text-lg sm:text-xl text-charcoal">
+              L. K. S Mahal
+            </p>
+            <p class="text-[11px] text-muted-ink">Dindigul Road, Trichy - 1</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md mx-auto">
+          <a href="https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac" target="_blank" rel="noopener noreferrer"
+            class="w-full sm:flex-1 btn-dusty-rose py-3.5 px-6 rounded-2xl font-cinzel text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2">
+            <i class="fa-solid fa-location-arrow text-[#E3C896]"></i>
+            <span>LOCATION</span>
+          </a>
+
+          <button id="calendar-action-btn" type="button"
+            class="w-full sm:flex-1 btn-champagne-gold py-3.5 px-6 rounded-2xl font-cinzel text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-2 cursor-pointer">
+            <i class="fa-regular fa-calendar-plus"></i>
+            <span>CALENDAR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. 'THE VENUE' & LIVE REAL-TIME COUNTDOWN ('COUNTING THE DAYS')
+       ========================================================================== -->
+  <section id="venue-countdown" class="py-16 sm:py-24 px-5">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch fade-up">
+      <div class="bg-white border border-[#B68D4C]/45 rounded-3xl p-8 sm:p-10 shadow-[0_18px_50px_rgba(110,51,65,0.06)] flex flex-col justify-between text-center">
+        <div>
+          <p class="font-cinzel text-[11px] uppercase tracking-[0.3em] text-gold-antique font-semibold mb-2">
+            Celebration Hall
+          </p>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-charcoal mb-4">
+            The Venue
+          </h2>
+          <div class="w-12 h-12 rounded-full bg-[#F8ECEA] border border-[#B68D4C]/40 flex items-center justify-center mx-auto mb-4 text-rose-deep">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-charcoal mb-1">
+            L. K. S Mahal
+          </h3>
+          <p class="text-sm sm:text-base text-muted-ink mb-6">
+            Dindigul Road, Trichy - 1
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <a href="https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac" target="_blank" rel="noopener noreferrer"
+            class="w-full btn-champagne-gold py-3.5 px-5 rounded-2xl font-cinzel text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>OPEN IN GOOGLE MAPS</span>
+          </a>
+
+          <button id="copy-address-btn" type="button"
+            class="w-full py-3 px-5 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7] hover:bg-[#F8ECEA] font-cinzel text-[11px] uppercase tracking-[0.2em] text-rose-deep font-semibold flex items-center justify-center gap-2 transition cursor-pointer">
+            <i class="fa-regular fa-copy"></i>
+            <span>Copy Venue Address</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-rose-deep text-[#FDF8F7] border border-[#B68D4C]/55 rounded-3xl p-8 sm:p-10 shadow-[0_18px_50px_rgba(110,51,65,0.16)] flex flex-col justify-between text-center relative overflow-hidden">
+        <div class="absolute inset-2.5 border border-[#E3C896]/25 rounded-2xl pointer-events-none"></div>
+
+        <div>
+          <p class="font-cinzel text-[11px] uppercase tracking-[0.3em] text-[#E3C896] font-semibold mb-2">
+            Until We Say Qubool
+          </p>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-white mb-6">
+            Counting the Days
+          </h2>
+
+          <div class="grid grid-cols-4 gap-2.5 sm:gap-3 my-4">
+            <div class="bg-white/10 backdrop-blur-sm border border-[#E3C896]/35 rounded-2xl py-4 px-1.5">
+              <div id="cd-days" class="font-editorial text-3xl sm:text-4xl font-bold text-white">00</div>
+              <div class="font-cinzel text-[9px] uppercase tracking-[0.18em] text-[#E3C896] mt-1">Days</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm border border-[#E3C896]/35 rounded-2xl py-4 px-1.5">
+              <div id="cd-hours" class="font-editorial text-3xl sm:text-4xl font-bold text-white">00</div>
+              <div class="font-cinzel text-[9px] uppercase tracking-[0.18em] text-[#E3C896] mt-1">Hours</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm border border-[#E3C896]/35 rounded-2xl py-4 px-1.5">
+              <div id="cd-minutes" class="font-editorial text-3xl sm:text-4xl font-bold text-white">00</div>
+              <div class="font-cinzel text-[9px] uppercase tracking-[0.18em] text-[#E3C896] mt-1">Minutes</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm border border-[#E3C896]/35 rounded-2xl py-4 px-1.5">
+              <div id="cd-seconds" class="font-editorial text-3xl sm:text-4xl font-bold text-[#E3C896]">00</div>
+              <div class="font-cinzel text-[9px] uppercase tracking-[0.18em] text-[#E3C896] mt-1">Seconds</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 border-t border-white/15 mt-4">
+          <p class="font-amiri text-3xl sm:text-4xl text-[#E3C896] leading-tight">
+            إِنْ شَاءَ اللَّهُ
+          </p>
+          <p class="font-cinzel text-[10px] uppercase tracking-[0.26em] text-white/80 mt-1">
+            If Allah wills
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. 'OUR FAMILIES' TWO-COLUMN SHOWCASE & 'GET IN TOUCH' FAMILY CARD
+       ========================================================================== -->
+  <section id="our-families" class="py-16 sm:py-24 px-5 border-y border-gold-hairline blush-surface/75">
+    <div class="max-w-4xl mx-auto fade-up">
+      <div class="text-center mb-12">
+        <p class="font-cinzel text-[11px] uppercase tracking-[0.32em] text-gold-antique font-semibold mb-2">
+          With Parental Blessings
+        </p>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-charcoal">
+          Our Families
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+        <div class="bg-white border border-[#B68D4C]/45 rounded-3xl p-8 text-center shadow-[0_14px_40px_rgba(110,51,65,0.05)]">
+          <span class="inline-block px-4 py-1 rounded-full bg-[#F8ECEA] font-cinzel text-[10px] uppercase tracking-[0.24em] text-rose-deep font-semibold mb-4">
+            The Groom
+          </span>
+          <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-charcoal leading-snug">
+            SHAHEED HUSSAIN,
+          </h3>
+          <p class="font-cinzel text-xs sm:text-sm font-semibold text-rose-deep tracking-wider mt-0.5 mb-4">
+            B.RIT., DRDT.,
+          </p>
+          <div class="h-px w-12 bg-[#B68D4C]/45 mx-auto mb-4"></div>
+          <p class="font-editorial italic text-lg text-muted-ink mb-1">Son of</p>
+          <p class="font-editorial font-bold text-xl sm:text-2xl text-charcoal leading-snug">
+            Mr. Mohamed Yunus &amp;<br />Mrs. Doulath Parveen
+          </p>
+        </div>
+
+        <div class="bg-white border border-[#B68D4C]/45 rounded-3xl p-8 text-center shadow-[0_14px_40px_rgba(110,51,65,0.05)]">
+          <span class="inline-block px-4 py-1 rounded-full bg-[#F8ECEA] font-cinzel text-[10px] uppercase tracking-[0.24em] text-rose-deep font-semibold mb-4">
+            The Bride
+          </span>
+          <h3 class="font-editorial font-bold text-2xl sm:text-3xl text-charcoal leading-snug">
+            AZRA,
+          </h3>
+          <p class="font-cinzel text-xs sm:text-sm font-semibold text-rose-deep tracking-wider mt-0.5 mb-4">
+            M.A
+          </p>
+          <div class="h-px w-12 bg-[#B68D4C]/45 mx-auto mb-4"></div>
+          <p class="font-editorial italic text-lg text-muted-ink mb-1">Daughter of</p>
+          <p class="font-editorial font-bold text-xl sm:text-2xl text-charcoal leading-snug">
+            Mr. Munuvar Basha &amp;<br />Mrs. Shakila Parvin
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white/95 border border-[#B68D4C]/40 rounded-3xl p-7 sm:p-8 text-center shadow-[0_12px_34px_rgba(110,51,65,0.04)]">
+        <p class="font-cinzel text-[11px] uppercase tracking-[0.28em] text-gold-antique font-semibold mb-2">
+          Get in Touch
+        </p>
+        <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal mb-2">
+          Hosted With Warmth &amp; Love
+        </h3>
+        <p class="text-xs sm:text-sm text-muted-ink max-w-xl mx-auto mb-5 leading-relaxed">
+          For travel assistance to L. K. S Mahal (Dindigul Road, Trichy - 1) or family coordination, both families warmly welcome you.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div class="rounded-2xl bg-[#FDF8F7] border border-[#B68D4C]/30 p-4">
+            <p class="font-cinzel text-[10px] uppercase tracking-[0.2em] text-rose-deep font-semibold mb-1">
+              Groom’s Family
+            </p>
+            <p class="font-editorial font-bold text-lg text-charcoal">
+              Mr. Mohamed Yunus &amp; Mrs. Doulath Parveen
+            </p>
+          </div>
+          <div class="rounded-2xl bg-[#FDF8F7] border border-[#B68D4C]/30 p-4">
+            <p class="font-cinzel text-[10px] uppercase tracking-[0.2em] text-rose-deep font-semibold mb-1">
+              Bride’s Family
+            </p>
+            <p class="font-editorial font-bold text-lg text-charcoal">
+              Mr. Munuvar Basha &amp; Mrs. Shakila Parvin
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. ARABIC NIKAH DUA & COMPLIMENTS LINE
+       ========================================================================== -->
+  <section id="nikah-dua" class="py-16 sm:py-20 px-5">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <p class="font-cinzel text-[10px] sm:text-xs uppercase tracking-[0.32em] text-gold-antique font-semibold mb-4">
+        Prophetic Blessing for the Newlyweds
+      </p>
+
+      <p class="font-amiri text-3xl sm:text-5xl text-rose-deep leading-relaxed mb-4">
+        بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+      </p>
+
+      <p class="font-editorial italic text-xl sm:text-2xl text-charcoal leading-relaxed mb-7">
+        “May Allah bless you, and shower His blessings upon you, and unite you both in goodness.”
+      </p>
+
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <span class="h-px w-14 bg-[#B68D4C]/45"></span>
+        <span class="w-1.5 h-1.5 rotate-45 bg-[#B68D4C]"></span>
+        <span class="h-px w-14 bg-[#B68D4C]/45"></span>
+      </div>
+
+      <p class="font-cinzel text-xs sm:text-sm uppercase tracking-[0.22em] text-rose-deep font-semibold">
+        With best compliments from the families of Shaheed Hussain &amp; Azra
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. INTERACTIVE 'WILL YOU JOIN US?' RSVP CARD
+       ========================================================================== -->
+  <section id="rsvp-section" class="py-16 sm:py-24 px-5 border-t border-gold-hairline blush-surface/75">
+    <div class="max-w-lg mx-auto fade-up">
+      <div class="bg-white border border-[#B68D4C]/45 rounded-3xl p-7 sm:p-10 shadow-[0_22px_60px_rgba(110,51,65,0.08)]">
+        <div class="text-center mb-7">
+          <p class="font-cinzel text-[11px] uppercase tracking-[0.3em] text-gold-antique font-semibold mb-2">
+            Kindly Respond
+          </p>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-bold text-charcoal">
+            Will You Join Us?
+          </h2>
+          <p class="text-xs sm:text-sm text-muted-ink mt-1.5">
+            Sunday, 20 December 2026 · 11:00 AM Onwards · L. K. S Mahal
+          </p>
+        </div>
+
+        <form id="rsvp-form" class="space-y-5">
+          <div>
+            <label for="guest-name-input" class="block font-cinzel text-[10px] uppercase tracking-[0.22em] text-charcoal font-semibold mb-2">
+              Your Name *
+            </label>
+            <input id="guest-name-input" type="text" required placeholder="Enter your full name"
+              class="w-full px-4 py-3.5 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7] text-charcoal text-sm focus:outline-none focus:border-[#6E3341]" />
+          </div>
+
+          <div>
+            <span class="block font-cinzel text-[10px] uppercase tracking-[0.22em] text-charcoal font-semibold mb-2">
+              Your Response
+            </span>
+            <div class="grid grid-cols-2 gap-3" role="radiogroup" aria-label="RSVP Response">
+              <button type="button" id="pill-accept" data-choice="Accept with joy"
+                class="rsvp-pill py-3 px-3 rounded-2xl border-2 border-[#6E3341] bg-[#6E3341] text-[#FDF8F7] font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer">
+                Accept with joy
+              </button>
+              <button type="button" id="pill-decline" data-choice="Decline with regret"
+                class="rsvp-pill py-3 px-3 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7] text-charcoal font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer">
+                Decline with regret
+              </button>
+            </div>
+          </div>
+
+          <div id="attendees-stepper-row">
+            <span class="block font-cinzel text-[10px] uppercase tracking-[0.22em] text-charcoal font-semibold mb-2">
+              Number of Attendees
+            </span>
+            <div class="flex items-center justify-between px-4 py-2.5 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7]">
+              <button type="button" id="stepper-minus" aria-label="Decrease attendees"
+                class="w-10 h-10 rounded-full bg-white border border-[#B68D4C]/45 text-rose-deep font-bold text-lg flex items-center justify-center hover:bg-[#F8ECEA] transition cursor-pointer">
+                &minus;
+              </button>
+              <div class="text-center">
+                <span id="attendee-count-display" class="font-editorial text-2xl font-bold text-charcoal">2</span>
+                <span class="block font-cinzel text-[9px] uppercase tracking-[0.2em] text-muted-ink">Guests</span>
+              </div>
+              <button type="button" id="stepper-plus" aria-label="Increase attendees"
+                class="w-10 h-10 rounded-full bg-white border border-[#B68D4C]/45 text-rose-deep font-bold text-lg flex items-center justify-center hover:bg-[#F8ECEA] transition cursor-pointer">
+                +
+              </button>
+            </div>
+          </div>
+
+          <button type="submit"
+            class="w-full btn-champagne-gold py-4 px-6 rounded-2xl font-cinzel text-xs uppercase tracking-[0.22em] cursor-pointer">
+            Confirm RSVP
+          </button>
+        </form>
+
+        <div id="rsvp-confirmed-state" class="hidden text-center py-6 px-4 rounded-2xl bg-[#F8ECEA] border border-[#B68D4C]/40">
+          <div class="w-12 h-12 rounded-full bg-rose-deep text-[#FDF8F7] flex items-center justify-center mx-auto mb-3">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-charcoal mb-2">
+            JazakAllah Khair!
+          </h3>
+          <p id="rsvp-confirmed-summary" class="text-xs sm:text-sm text-muted-ink leading-relaxed mb-5"></p>
+          <button type="button" id="rsvp-edit-btn"
+            class="font-cinzel text-[10px] uppercase tracking-[0.22em] text-rose-deep underline font-semibold cursor-pointer">
+            Update RSVP
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. ELEGANT FOOTER WITH 'S & A · FOREVER BEGINS HERE'
+       ========================================================================== -->
+  <footer class="py-12 px-5 text-center border-t border-gold-hairline silk-paper">
+    <div class="max-w-lg mx-auto">
+      <div class="w-12 h-12 rounded-full border border-[#B68D4C] flex items-center justify-center mx-auto mb-4 font-cinzel text-xs font-bold text-rose-deep bg-white">
+        S &amp; A
+      </div>
+      <p class="font-cinzel text-xs sm:text-sm uppercase tracking-[0.3em] text-charcoal font-semibold">
+        S &amp; A · Forever begins here
+      </p>
+      <p class="font-editorial italic text-base text-muted-ink mt-1.5">
+        Shaheed Hussain &amp; Azra · 20 December 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: COVER REVEAL, AUDIO PLAYBACK, SCRATCH CANVAS, COUNTDOWN, RSVP
+       ========================================================================== -->
+  <script>
+    let toastTimer;
+    function showToast(msg) {
+      const banner = document.getElementById('toast-banner');
+      const text = document.getElementById('toast-message');
+      text.textContent = msg;
+      banner.classList.remove('opacity-0', '-translate-y-4');
+      banner.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        banner.classList.remove('opacity-100', 'translate-y-0');
+        banner.classList.add('opacity-0', '-translate-y-4');
+      }, 3200);
+    }
+
+    // Replaced Audio Controller (Uses 'wedding-theme.mp3' only)
+    const weddingSong = document.getElementById('wedding-song');
+    const audioToggleBtn = document.getElementById('audio-toggle-btn');
+    const audioToggleIcon = document.getElementById('audio-toggle-icon');
+    let isAudioPlaying = false;
+
+    function syncAudioIcon(playing) {
+      isAudioPlaying = playing;
+      audioToggleIcon.className = playing
+        ? 'fa-solid fa-volume-high text-sm text-gold-antique'
+        : 'fa-solid fa-volume-xmark text-sm';
+    }
+
+    function startAudio(silent = false) {
+      weddingSong.play().then(() => {
+        syncAudioIcon(true);
+        if (!silent) showToast('Wedding music playing');
+      }).catch(() => {
+        syncAudioIcon(false);
+        if (!silent) showToast("Upload 'wedding-theme.mp3' to play audio");
+      });
+    }
+
+    function stopAudio(silent = false) {
+      weddingSong.pause();
+      syncAudioIcon(false);
+      if (!silent) showToast('Music paused');
+    }
+
+    weddingSong.addEventListener('play', () => syncAudioIcon(true));
+    weddingSong.addEventListener('pause', () => syncAudioIcon(false));
+
+    audioToggleBtn.addEventListener('click', () => {
+      if (isAudioPlaying) stopAudio(false);
+      else startAudio(false);
+    });
+
+    // Full-Screen 'Tap to Open' Cover Reveal
+    const entryCover = document.getElementById('entry-cover');
+    const tapToOpenBtn = document.getElementById('tap-to-open-btn');
+
+    tapToOpenBtn.addEventListener('click', () => {
+      entryCover.classList.add('opened');
+      startAudio(true);
+      setTimeout(() => {
+        entryCover.style.visibility = 'hidden';
+        entryCover.style.opacity = '0';
+      }, 1150);
+    });
+
+    // Interactive HTML5 Canvas 'Scratch to Reveal' Save-the-Date Card
+    const scratchWrapper = document.getElementById('scratch-card-wrapper');
+    const scratchCanvas = document.getElementById('scratch-canvas');
+    const scratchCtx = scratchCanvas.getContext('2d');
+    const revealAllBtn = document.getElementById('reveal-all-btn');
+
+    let isScratching = false;
+    let isRevealed = false;
+    let strokeCounter = 0;
+
+    function initScratchFoil() {
+      const rect = scratchWrapper.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      scratchCanvas.width = rect.width * dpr;
+      scratchCanvas.height = rect.height * dpr;
+      scratchCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const grad = scratchCtx.createLinearGradient(0, 0, rect.width, rect.height);
+      grad.addColorStop(0, '#B68D4C');
+      grad.addColorStop(0.32, '#E3C896');
+      grad.addColorStop(0.58, '#C89B6E');
+      grad.addColorStop(0.85, '#EAD4A8');
+      grad.addColorStop(1, '#9C7138');
+
+      scratchCtx.globalCompositeOperation = 'source-over';
+      scratchCtx.fillStyle = grad;
+      scratchCtx.fillRect(0, 0, rect.width, rect.height);
+
+      for (let i = 0; i < 180; i++) {
+        scratchCtx.fillStyle = i % 2 === 0 ? 'rgba(255, 255, 255, 0.22)' : 'rgba(110, 51, 65, 0.08)';
+        scratchCtx.beginPath();
+        scratchCtx.arc(Math.random() * rect.width, Math.random() * rect.height, Math.random() * 1.6 + 0.4, 0, Math.PI * 2);
+        scratchCtx.fill();
+      }
+
+      scratchCtx.strokeStyle = 'rgba(39, 30, 32, 0.26)';
+      scratchCtx.lineWidth = 1.2;
+      scratchCtx.strokeRect(12, 12, rect.width - 24, rect.height - 24);
+
+      scratchCtx.fillStyle = '#271E20';
+      scratchCtx.textAlign = 'center';
+      scratchCtx.font = '600 13px "Cinzel", serif';
+      scratchCtx.fillText('S & A  •  SAVE THE DATE', rect.width / 2, rect.height / 2 - 12);
+
+      scratchCtx.font = 'italic 18px "Cormorant Garamond", serif';
+      scratchCtx.fillText('Scratch here with your finger to reveal', rect.width / 2, rect.height / 2 + 16);
+    }
+
+    function getPointerCoords(evt) {
+      const rect = scratchCanvas.getBoundingClientRect();
+      const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+      const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function scratchAt(x, y) {
+      if (isRevealed) return;
+      scratchCtx.globalCompositeOperation = 'destination-out';
+      scratchCtx.beginPath();
+      scratchCtx.arc(x, y, 26, 0, Math.PI * 2);
+      scratchCtx.fill();
+
+      strokeCounter++;
+      if (strokeCounter % 18 === 0) {
+        checkRevealThreshold();
+      }
+    }
+
+    function checkRevealThreshold() {
+      if (isRevealed) return;
+      try {
+        const imgData = scratchCtx.getImageData(0, 0, scratchCanvas.width, scratchCanvas.height).data;
+        let transparentPixels = 0;
+        const step = 32;
+        for (let i = 3; i < imgData.length; i += step) {
+          if (imgData[i] === 0) transparentPixels++;
+        }
+        const totalSampled = imgData.length / step;
+        if (transparentPixels / totalSampled > 0.45) {
+          completeScratchReveal();
+        }
+      } catch (e) {}
+    }
+
+    function completeScratchReveal() {
+      if (isRevealed) return;
+      isRevealed = true;
+      scratchCanvas.style.opacity = '0';
+      setTimeout(() => {
+        scratchCanvas.style.pointerEvents = 'none';
+      }, 700);
+      showToast('Save the Date revealed: Sunday, 20 December 2026!');
+    }
+
+    scratchCanvas.addEventListener('mousedown', (e) => {
+      isScratching = true;
+      const pos = getPointerCoords(e);
+      scratchAt(pos.x, pos.y);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isScratching) return;
+      const pos = getPointerCoords(e);
+      scratchAt(pos.x, pos.y);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isScratching = false;
+    });
+
+    scratchCanvas.addEventListener('touchstart', (e) => {
+      isScratching = true;
+      const pos = getPointerCoords(e);
+      scratchAt(pos.x, pos.y);
+    }, { passive: true });
+
+    scratchCanvas.addEventListener('touchmove', (e) => {
+      if (!isScratching) return;
+      e.preventDefault();
+      const pos = getPointerCoords(e);
+      scratchAt(pos.x, pos.y);
+    }, { passive: false });
+
+    scratchCanvas.addEventListener('touchend', () => {
+      isScratching = false;
+    });
+
+    revealAllBtn.addEventListener('click', completeScratchReveal);
+
+    // CALENDAR Button (.ics Download + Google Calendar Tab)
+    document.getElementById('calendar-action-btn').addEventListener('click', () => {
+      const icsLines = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Shaheed Hussain & Azra Nikah Invitation//EN',
+        'CALSCALE:GREGORIAN',
+        'BEGIN:VEVENT',
+        'UID:shaheed-hussain-azra-nikah-20261220@syncandstyle',
+        'DTSTAMP:20260101T000000Z',
+        'SUMMARY:Nikah Ceremony — Shaheed Hussain & Azra',
+        'DTSTART;TZID=Asia/Kolkata:20261220T110000',
+        'DTEND;TZID=Asia/Kolkata:20261220T150000',
+        'LOCATION:L. K. S Mahal\\, Dindigul Road\\, Trichy - 1',
+        'DESCRIPTION:In the name of Allah\\, the Most Gracious\\, the Most Merciful. Nikah Ceremony of Shaheed Hussain\\, B.RIT.\\, DRDT.\\, & Azra\\, M.A. Location: https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      const blob = new Blob([icsLines], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.setAttribute('download', 'Shaheed_Hussain_Azra_Nikah_2026.ics');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      const gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+        + '&text=' + encodeURIComponent('Nikah Ceremony — Shaheed Hussain & Azra')
+        + '&dates=20261220T053000Z/20261220T093000Z'
+        + '&details=' + encodeURIComponent('Nikah Ceremony of SHAHEED HUSSAIN, B.RIT., DRDT., & AZRA, M.A. Location: https://maps.app.goo.gl/2DdjAGuBfx8dRksq6?g_st=ac')
+        + '&location=' + encodeURIComponent('L. K. S Mahal, Dindigul Road, Trichy - 1');
+      window.open(gcalUrl, '_blank', 'noopener,noreferrer');
+
+      showToast('Added to Google Calendar & .ics downloaded');
+    });
+
+    // Copy Venue Address
+    document.getElementById('copy-address-btn').addEventListener('click', () => {
+      const addr = 'L. K. S Mahal, Dindigul Road, Trichy - 1';
+      const temp = document.createElement('textarea');
+      temp.value = addr;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+      showToast('Address copied: L. K. S Mahal, Dindigul Road, Trichy - 1');
+    });
+
+    // Live Real-Time Countdown to Dec 20, 2026 11:00 AM IST (+05:30)
+    const targetTimestamp = new Date('2026-12-20T11:00:00+05:30').getTime();
+
+    function refreshCountdown() {
+      const diff = targetTimestamp - Date.now();
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-minutes').textContent = '00';
+        document.getElementById('cd-seconds').textContent = '00';
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(s).padStart(2, '0');
+    }
+
+    setInterval(refreshCountdown, 1000);
+    refreshCountdown();
+
+    // Interactive 'Will You Join Us?' RSVP Card
+    let selectedResponse = 'Accept with joy';
+    let attendeeCount = 2;
+
+    const pillAccept = document.getElementById('pill-accept');
+    const pillDecline = document.getElementById('pill-decline');
+    const stepperRow = document.getElementById('attendees-stepper-row');
+    const countDisplay = document.getElementById('attendee-count-display');
+
+    function setRsvpChoice(choice) {
+      selectedResponse = choice;
+      if (choice === 'Accept with joy') {
+        pillAccept.className = 'rsvp-pill py-3 px-3 rounded-2xl border-2 border-[#6E3341] bg-[#6E3341] text-[#FDF8F7] font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer';
+        pillDecline.className = 'rsvp-pill py-3 px-3 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7] text-charcoal font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer';
+        stepperRow.classList.remove('opacity-40', 'pointer-events-none');
+      } else {
+        pillDecline.className = 'rsvp-pill py-3 px-3 rounded-2xl border-2 border-[#6E3341] bg-[#6E3341] text-[#FDF8F7] font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer';
+        pillAccept.className = 'rsvp-pill py-3 px-3 rounded-2xl border border-[#B68D4C]/45 bg-[#FDF8F7] text-charcoal font-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition cursor-pointer';
+        stepperRow.classList.add('opacity-40', 'pointer-events-none');
+      }
+    }
+
+    pillAccept.addEventListener('click', () => setRsvpChoice('Accept with joy'));
+    pillDecline.addEventListener('click', () => setRsvpChoice('Decline with regret'));
+
+    document.getElementById('stepper-minus').addEventListener('click', () => {
+      if (attendeeCount > 1) {
+        attendeeCount--;
+        countDisplay.textContent = attendeeCount;
+      }
+    });
+
+    document.getElementById('stepper-plus').addEventListener('click', () => {
+      if (attendeeCount < 15) {
+        attendeeCount++;
+        countDisplay.textContent = attendeeCount;
+      }
+    });
+
+    const rsvpForm = document.getElementById('rsvp-form');
+    const rsvpConfirmedState = document.getElementById('rsvp-confirmed-state');
+    const rsvpConfirmedSummary = document.getElementById('rsvp-confirmed-summary');
+
+    function showRsvpConfirmed(data) {
+      rsvpForm.classList.add('hidden');
+      rsvpConfirmedState.classList.remove('hidden');
+      if (data.response === 'Accept with joy') {
+        rsvpConfirmedSummary.textContent = `Thank you, ${data.name}! We have recorded your RSVP (${data.response} · ${data.guests} ${data.guests === 1 ? 'Guest' : 'Guests'}) for Sunday, 20 December 2026 at L. K. S Mahal, Trichy.`;
+      } else {
+        rsvpConfirmedSummary.textContent = `Thank you, ${data.name}. We will miss your presence and sincerely appreciate your warm Duas for Shaheed Hussain & Azra.`;
+      }
+    }
+
+    try {
+      const saved = JSON.parse(localStorage.getItem('sa_nikah_rsvp_v2'));
+      if (saved && saved.name) showRsvpConfirmed(saved);
+    } catch (e) {}
+
+    rsvpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const guestName = document.getElementById('guest-name-input').value.trim();
+      if (!guestName) return;
+
+      const record = {
+        name: guestName,
+        response: selectedResponse,
+        guests: attendeeCount
+      };
+      try {
+        localStorage.setItem('sa_nikah_rsvp_v2', JSON.stringify(record));
+      } catch (err) {}
+
+      showRsvpConfirmed(record);
+      showToast('RSVP confirmed! JazakAllah Khair');
+    });
+
+    document.getElementById('rsvp-edit-btn').addEventListener('click', () => {
+      rsvpConfirmedState.classList.add('hidden');
+      rsvpForm.classList.remove('hidden');
+    });
+
+    // Scroll Fade-Up Observer & Window Load Setup
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    window.addEventListener('resize', () => {
+      if (!isRevealed) initScratchFoil();
+    });
+
+    window.onload = function () {
+      initScratchFoil();
+    };
+  </script>
+</body>
+</html>
